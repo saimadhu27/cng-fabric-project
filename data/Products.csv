@@ -1,0 +1,43 @@
+ProductID,ProductName,Category,SubCategory,UOM,BasePrice_USD,StandardCost_USD,PrimarySupplierID,HSCode,WeightPerUnit_KG,IsHazardous,Division,ActiveFlag,IntroducedDate
+PRD0001,   Bleached Softwood Kraft Pulp  ,Pulp,BSKP,MT,680,802.64,SUP0024,4813.42,78.4,0,Lindenmeyr Publications,1,04/07/2018
+PRD0002,Bleached Hardwood Kraft Pulp,Pulp,BHKP,MT,620,474.02,SUP0024,4798.72,,0,Central National,1,18 January 2013
+PRD0003,Fluff Pulp,pulp,  Fluff ,MT ,750,541.48,SUP0013,,796.5,1,Central National,false,11 December 2013
+PRD0004,Dissolving Pulp,Pulp,Dissolving,MT,900,$564.65, SUP0029,4777.96,917.1,0,   Lindenmeyr Publications  ,true,01 September 2019
+PRD0005,Uncoated Woodfree A4 80gsm,Printing Paper,UWF,Ream,4.5,3.08 USD,SUP0025,4818.81,663.8,0,North American Distribution,1,01-Dec-2016
+PRD0006,Uncoated Woodfree A3 80gsm,Printing Paper,UWF,Ream,8.9,5.59,SUP0029,4727.14,316.4,0,Central National,1,2014-05-05
+PRD0007,   Coated Woodfree Gloss 90gsm  ,Printing Paper,CWF,MT,920,588.05,SUP0036,4708.34,636.1,No,Lindenmeyr Publications,1,2014-07-29
+PRD0008,Coated Woodfree Matt 115gsm,Printing Paper,CWF,MT,980,697.45,SUP0032,4797.65,483.0,0,Lindenmeyr Publications,true,2010/01/14
+PRD0009,  Newsprint 45gsm ,Printing Paper,Newsprint,MT,480,338.9,SUP9908,,260.7,0,,0,12/07/16
+PRD0010,  Magazine Paper LWC 57gsm  ,Printing Paper,  LWC  ,MT,$710.00,542.38,SUP0038,4721.19,897.2,0,Lindenmeyr Publications,1,03/27/16
+PRD0011,Offset Printing Paper 70gsm,Printing Paper,Offset,MT,830,566.24,SUP0034,4787.80,279.9,0,Central National,1,2012/07/30
+PRD0012,Corrugated Medium Fluting,Packaging,Containerboard,mt,560 USD,397.25,SUP0025,4776.60,479.5,No,Central National,1,2018-11-08
+PRD0013,Kraftliner Brown 125gsm,Packaging,Containerboard,MT,590 USD,369.65,SUP0001,4755.56,791.6,0,Central National,1,2017-02-19
+PRD0014,Coated Duplex Board 300gsm,Packaging,Cartonboard,MT,780,592.98,SUP0017,4729.78,940.8,0,Lindenmeyr Publications,1,31-May-2015
+PRD0015,Folding Box Board 240gsm,packaging,Cartonboard,MT,820,511.39,SUP0016,4744.17,154.3,0,North American Distribution,1,2019-05-02
+PRD0016,Bubble Wrap Roll 500mm,Packaging,Protective,Roll,45,33.72,SUP9912,4703.48,949.5,N,North American Distribution,1,2016-06-25
+PRD0017,Stretch Film 17mic 500mm,Packaging,Stretch Film,Roll ,28,$21.40,SUP0013,4817.94,324.5,0,  Central National,1,01-13-2013
+PRD0018,Tissue Jumbo Roll Parent,Tissue,Jumbo Roll,MT ,1100.00,857.84,SUP0008,,183.8,0,  Lindenmeyr Publications ,true,2020-03-13
+PRD0019,Facial Tissue 2ply 200 sheets,Tissue,   Consumer,Case,22,16.77 USD,SUP0038,4703.78,,0,Central National,true,2013-11-12
+PRD0020,PAPER TOWEL ROLL 2PLY,Tissue,Away from Home,Case,18,11.84,SUP0010,4782.92,819.0,No,Central National,1,20/03/2014
+PRD0021,Toilet Tissue 2ply 96 rolls,Tissue,Consumer,Case,30.00,21.07,SUP0034,4777.80,195.4,0,Lindenmeyr Publications,true,2014-01-01
+PRD0022,Softwood Lumber 2x4 8ft,Wood Products, Lumber ,MBF,680,469.34,SUP0015,4732.56,882.6,No,Lindenmeyr Publications,true,2014-10-16
+PRD0023,Plywood 18mm 4x8ft,Wood Products,Panel,Sheet,42,31.41,SUP0040,4795.80,524.6,0,   Lindenmeyr Publications,1,26-Jun-2020
+PRD0024,OSB 11mm,Wood Products,Panel,Sheet ,$28.00,18.43,SUP0027,4717.10,225.5,0,North American Distribution,1,2013-04-03
+PRD0025,MDF 16mm,Wood Products,Panel,Sheet,35,24.49,SUP0026,4805.84,435.1,0,Central National,0,02 September 2018
+PRD0026,Structural Steel HEA 200,Metals,Steel,MT,820 USD,539.11,SUP0019,4726.68,871.0,0,,1,11-06-2013
+PRD0027,Aluminum Sheet 3mm 1500x3000,Metals,Aluminum,MT ,2600,1677.32,SUP0020,4755.21,488.3,0,Central National,1,2015-12-06
+PRD0028, Stainless Steel Coil 2B 304,Metals,Stainless,MT,3100,2196.14,SUP0032,4708.21,445.3,0,North American Distribution,true,10 January 2011
+PRD0029,Aluminum Extrusion 6063-T5,metals,Aluminum,MT,"$2,900.00",1916.22,SUP9971,4709.38,531.9,0,North American Distribution,1,2010-11-26
+PRD0030,Spunbond PP Nonwoven 20gsm,Nonwovens,Spunbond,MT,1200,771.86,SUP0024,4788.90,686.0,0,  Central National ,1,06-21-2018
+PRD0031,Airlaid Nonwoven 60gsm,Nonwovens,Airlaid,MT,1450,1050.67,SUP0034,4722.65,624.1,0,   Lindenmeyr Publications  ,true,2011/07/16
+PRD0032,Recycled OCC Grade 11,Recycled Fiber,OCC,MT,$140.00,158.64,SUP0004,4773.11,657.1,0, North American Distribution ,1,2015-09-04
+PRD0033,Recycled ONP Grade 6,Recycled Fiber,ONP,MT,90,$56.77,SUP0016,4805.32,348.7,0,Lindenmeyr Publications,1,2019-04-30
+PRD0034,Recycled Deinked Pulp,Recycled Fiber,DIP,MT,310,202.74,SUP0030,4822.18,,0,Lindenmeyr Publications,0,2015-04-14
+PRD0035,Copy Paper 75gsm Carton,Printing Paper,Copy,Carton,38,24.78,SUP0012,4757.26,188.6,0,  North American Distribution,1,2015-12-04
+PRD0036,Envelope C4 White Box 250,Printing Paper,Envelopes,Box,12,8.47,SUP0035,4701.98,862.0,0,Central National,1,2020-08-02
+PRD0037,Label Stock Gloss 80gsm,Packaging,Labels,MT,1050,764.06 USD,SUP0023,4812.88,569.8,0, Lindenmeyr Publications  ,1,2010-07-10
+PRD0038,KRAFT PAPER BROWN 90GSM,Packaging,Kraft,mt,$620.00,477.86,SUP0027,4791.92,887.2,No,North American Distribution,true,2021-02-23
+PRD0039,Grease-Proof Paper 40gsm,PACKAGING,Specialty,MT,$890.00,687.64,SUP0037,4729.97,301.1,N,North American Distribution,1,02-27-2017
+PRD0040,Thermal Paper Roll 80mm,Printing Paper,Thermal,roll,6.5,4.91,SUP0024,4820.18,385.3,0,North American Distribution,1,09-Dec-2016
+PRD0020, PAPER TOWEL ROLL 2PLY,  Tissue ,  Away from Home ,Case,18,   11.84  ,SUP0010,4782.92,819.0,No,Central National,1,20/03/2014
+   PRD0017 , Stretch Film 17mic 500mm  ,  Packaging ,   Stretch Film,Roll ,28,   $21.40,SUP0013,  4817.94 ,324.5,0,  Central National,1,   01-13-2013  

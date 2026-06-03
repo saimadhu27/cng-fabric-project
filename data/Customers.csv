@@ -1,0 +1,73 @@
+CustomerID,CustomerName,Segment,Division,Country,State,City,Region,CreditLimit_USD,PaymentTerms,SalesRepID,AccountManagerID,CustomerSince,AnnualRevenueTier,ActiveFlag,PreferredCurrency,TaxExempt
+ CUST00001,  QUAD/GRAPHICS INC ,Packaging Converter,Central National,USA,FL,New York,APAC,1000000,Net 30,REP010,AM015,01 June 2000,platinum,1,EUR,0
+CUST00002,RR Donnelley,Commercial Printer,North American Distribution,Mexico,,Minneapolis,EMEA,10000000,Net 90,REP014,AM011,2003-11-07,Bronze,0,CAD,0
+CUST00003,LSC Communications,Foodservice,North American Distribution,united states,WA,,Americas,5000000,Net 30,REP017,AM014,2019-03-01,Platinum,1,GBP,0
+CUST00004,  Cenveo Worldwide ,COMMERCIAL PRINTER,Lindenmeyr Publications,US,TX,Los Angeles,Americas,100000,Net 45,REP039,AM009,2018-12-16,Gold,1,CAD,0
+CUST00005,   Consolidated Graphics,,Central National,usa,PA,Minneapolis,EMEA,100000,Net 60,REP022,AM012,08/26/04,Silver,Active,GBP,No
+CUST00006,  vistaprint nv  ,Industrial,North American Distribution,U.S.,CA,Chicago,EMEA,500000.00,Net 45,REP038,,2009-05-26,,N,EUR,0
+CUST00007,Taylor Communications,,Central National,United States,IL,New York,Americas,1000000,Net 60,REP038,AM009,2008-08-19,bronze,1,CAD,0
+CUST00008,Deluxe Corporation,Publisher,Central National,U.S.,MN,Boston,Americas,5000000.00,Net 45,REP003,AM014,2014-03-27,Gold,Active,GBP,No
+CUST00009,Multi-Color Corporation,Packaging Converter,North American Distribution,UNITED STATES,,Seattle,EMEA,500000,Net 30,,AM014,2013-04-25,Silver,1,EUR,0
+CUST00010,Matthews International,Government,Central National,USA,IL,Chicago,APAC,250000,Net 60,REP005,AM006,2001-03-10,Gold,0,CAD,Yes
+CUST00011,  Meredith Corporation,Industrial,Central National,Mexico,,Seattle,EMEA,100000,2/10 Net 30,REP020,AM008,2005-04-21,Silver,N,GBP,0
+CUST00012,CONDÉ NAST,Retail,  Lindenmeyr Publications,USA,IL,Seattle,Americas,5000000,   Net 45 ,REP031,AM014,2012-03-15,Bronze,0,EUR,1
+CUST00013,Hearst Magazines,Industrial,Central National,USA,WA,Minneapolis,APAC,500000,,REP008,AM005,2002-10-14,Platinum,Y,USD,0
+CUST00014,Time Inc,INDUSTRIAL,Lindenmeyr Publications,United States,NY,Philadelphia,APAC,250000,Net 30,REP036,AM001,2018-03-21,Platinum,1,CAD,0
+CUST00015,Rodale Press,Retail,North American Distribution,USA,PA,Chicago,Americas,1000000,Net 60,REP010,AM007,2000-04-26,Silver,1,,0
+CUST00016,Penguin Random House,publisher,North American Distribution,CAN,,Atlanta,EMEA,250000,Net 45,REP002,AM013,2017-11-19,,Y,GBP,0
+ CUST00017  ,HarperCollins,Industrial,Central National,U.S.A,CA,Boston,APAC,10000000,Net 45,,AM015,2017-11-04,bronze,1,EUR,0
+CUST00018,Simon & Schuster,Packaging Converter,Lindenmeyr Publications,Canada,,  Atlanta,Americas,100000,Net 60,REP040,AM010,06 April 2019,Gold,1,USD,0
+CUST00019, Scholastic Corporation ,,Central National,CA,,Philadelphia,Americas,100000,Net 90,,AM012,2012/09/05,Silver,1,EUR,0
+CUST00020,Houghton Mifflin,Foodservice, North American Distribution ,UNITED STATES,IL,Philadelphia,Americas,500000,Net 90,REP037,AM009,2017-10-09,Platinum,1,GBP,0
+CUST00021,   Staples Inc ,Industrial,Central National,United States,OH,Seattle,Emea,100000,Net 90,REP004,,2005-07-12,Gold,Y,CAD,0
+CUST00022,Office Depot,Packaging Converter,Central National,canada,,Los Angeles,Americas,250000,Net 60,REP019,AM006,2001-05-13,Silver,1,CAD,Yes
+CUST00023,Amazon Supply,FOODSERVICE,Lindenmeyr Publications,USA,WA,,Apac,10000000,Net 60,REP023,AM012,10/27/09,Gold,1,CAD,No
+CUST00024,Grainger WW,Packaging Converter,Central National,CA,,Seattle,EMEA,-10000000,Net 30,REP036,AM010,2018-12-12,Silver,N,EUR,0
+CUST00025,HD Supply,Retail,Central National,brazil,,Philadelphia,APAC,500000,Net 30,REP032,AM003,2004-08-16,Silver,Active,GBP,0
+CUST00026, Walmart Stores,Office/Corporate,Central National,germany,,New York,EMEA,100000,Net 30,REP025,AM008,2012-11-27,Silver,1,GBP,0
+CUST00027,  Target Corporation,Office/Corporate,North American Distribution,GB,,Boston,APAC,10000000 USD,Net 60,REP007,AM014,2016-04-21,Platinum,1,CAD,0
+CUST00028,  Costco Wholesale ,Office/Corporate,North American Distribution,US,FL,Dallas,APAC,10000000,2/10 Net 30,REP006,AM010,2019-10-09,Platinum,1,,Yes
+ CUST00029 ,Dollar General,Commercial Printer,North American Distribution,usa,MN,Minneapolis,Americas,500000,Net 90,REP022,AM010,2011-10-09,SILVER,1,EUR,0
+CUST00030,Dollar Tree,,  North American Distribution ,Australia,,Seattle,APAC,"$250,000.00",Net 45,REP017,AM015,2016-02-26,Bronze,Y,EUR,0
+CUST00031,  FedEx Office,Retail,Lindenmeyr Publications,U.S.A,MA,Seattle,EMEA,100000,   Net 30,REP031,AM006,2006-03-21,Platinum,1,CAD,0
+CUST00032,UPS Store,Office/Corporate,Central National,united states,PA, Miami,APAC,100000,Net 90,REP026,AM007,2000-09-02,GOLD,Inactive,GBP,0
+CUST00033,Kinkos,Packaging Converter,  Lindenmeyr Publications,united states,NY, Atlanta ,APAC,10000000,2/10 Net 30,REP032,AM014,05-23-2019,Gold,1,USD,1
+CUST00034,alphagraphics,Publisher,North American Distribution,U.S.,TX,Atlanta,APAC,500000,Net 60,REP026,AM014,2003-04-29,Gold,1,EUR,0
+   CUST00035,Sir Speedy,Publisher,Lindenmeyr Publications,GB,,Philadelphia,Americas,10000000,Net 60,REP015,AM014,16/01/2006,Silver,1,USD,0
+CUST00036,Weyerhaeuser Dist,Government,Lindenmeyr Publications,US,WA,Miami,APAC,500000,2/10 Net 30,REP027,AM010,09-13-2012,Gold,1,CAD,0
+CUST00037,Home Depot,Retail,Central National,U.K.,,Philadelphia,AMERICAS,500000,Net 30,REP003,AM010,2014/11/03,Gold,1,CAD,0
+CUST00038,Lowe's Companies,Foodservice,Lindenmeyr Publications,united states,GA,Chicago,EMEA,1000000,Net 45,REP021,AM007,2011-06-14,Silver,1,CAD,0
+CUST00039,84 Lumber,,North American Distribution,France,,Los Angeles,APAC,250000,Net 30,REP027,AM015,2015-11-12,Platinum,1,EUR,0
+   CUST00040  ,CARTER LUMBER,COMMERCIAL PRINTER,   Central National,Mexico,,Chicago,Americas,500000,Net 30,REP038,AM011,2004-04-28,Platinum,1,EUR,1
+CUST00041,   US Foods  ,Government,Lindenmeyr Publications,United States,CA,Miami,Americas,10000000,2/10 Net 30,REP004,AM006,14/04/2016,Bronze,1,USD,0
+CUST00042,Sysco Corporation,Packaging Converter,Central National,United States,OH,Minneapolis,Americas,10000000,2/10 Net 30,REP031,AM014,2002-06-20,Gold,1,EUR,0
+CUST00043,Performance Food Group,Retail,Central National,U.S.,MA,Boston,AMERICAS,1000000,Net 60,REP007,AM007,2010-04-23,Platinum,Y,GBP,Yes
+CUST00044,McLane Company,commercial printer,Central National,usa,OH,Minneapolis,EMEA,"$250,000.00",Net 60,,AM013,06-Apr-2011,Gold,Y,CAD,0
+CUST00045,Core-Mark,,North American Distribution,UNITED STATES,MA,Seattle,APAC,250000,,REP017,AM007,2006/04/06,Gold,1,GBP,0
+CUST00046,Kimberly-Clark,Government,Central National,U.S.A,MA,Los Angeles,Americas,1000000,,REP020,AM012,19 April 2016,,Inactive,,1
+CUST00047,Procter & Gamble,Packaging Converter,Lindenmeyr Publications,usa,GA,Chicago,EMEA,10000000,Net 90,REP040,AM005,2016-10-05,Bronze,1,,0
+CUST00048,Georgia-Pacific,Retail,,united states,CA,Chicago,APAC,5000000,Net 60,REP039,AM007,22/12/2016,Bronze,0,EUR,0
+CUST00049,Essity NA,Commercial Printer,North American Distribution,U.S.A,PA,   Philadelphia ,Americas,250000, Net 45,REP014,AM010,2000-05-15,Silver,Active,EUR,0
+CUST00050,Cascades Tissue,Industrial,Central National,US,OH,Los Angeles,Americas,500000,2/10 Net 30,REP013,AM011,2005-07-13,Silver,1,EUR,0
+CUST00051,Boston Globe Media,,Lindenmeyr Publications,Deutschland,,New York,Americas,1000000,2/10 Net 30,REP001,AM015,2011-11-09,Gold,1,USD,0
+CUST00052,Tribune Publishing,,  Central National,United States,IL,Philadelphia,Americas,100000,Net 60,REP019,,2008-07-05,Silver,Y,EUR,0
+CUST00053,Gannett Co,Office/Corporate,Lindenmeyr Publications,USA,NC,  Seattle,APAC,1000000,2/10 Net 30,REP003,AM003,06-24-2001,,1,,0
+CUST00054,Lee Enterprises,Packaging Converter,Central National,USA,GA,Minneapolis,,10000000,Net 30,REP032,AM012,01 August 2003,Platinum,Active,EUR,0
+CUST00055,McClatchy,Foodservice,Central National,U.S.A,IL,New York,EMEA,10000000,Net 60,REP020,AM011,25-Apr-2018,Gold,Active,USD,0
+CUST00056,  Sealed Air Corp,Packaging Converter,,United States,,Boston,EMEA,100000 USD,  2/10 Net 30  ,REP001,AM013,2009-12-02,BRONZE,0,CAD,0
+CUST00057,Berry Global,Foodservice,North American Distribution,Brazil,,Atlanta,APAC,250000,Net 30,REP014,AM010,2003-01-16,Platinum,0,USD,1
+CUST00058,Greif Inc,Industrial, Central National  ,usa,GA,Seattle,EMEA,10000000,Net 30,REP036,AM014,11-14-2001,Bronze,1,GBP,0
+CUST00059,Sonoco Products,Packaging Converter,Lindenmeyr Publications,BRA,,Minneapolis,EMEA,250000.00,   Net 60,REP030,AM007,2009-03-18,Platinum,1,GBP,0
+CUST00060,AEP Industries,Government,North American Distribution,united states,MN,Boston,Americas,10000000,Net 90,REP008,AM001,06/06/2016,Bronze,0,GBP,0
+CUST00061,Novipax LLC,Publisher,   Central National,U.S.A,OH,  Atlanta ,Emea,500000,Net 60,REP027,AM014,01-Jun-2002,Platinum,1,GBP,0
+  CUST00062,   PolyOne Corp  ,Publisher,Central National,usa,MN,Miami,EMEA,5000000,   2/10 Net 30,REP001,,25 July 2018,Bronze,1,EUR,1
+CUST00063,Pregis LLC,Industrial,Central National,united states,NY,Minneapolis,APAC,250000,Net 45,REP007,AM011,2019-09-29,Gold,1,,0
+CUST00064,Free-Flow Packaging,Publisher,Central National,UNITED STATES,OH,Boston,,100000.00,  2/10 Net 30 ,REP003,,2017-09-30,Silver,0,USD,0
+CUST00065,Ranpak Holdings,Foodservice,Central National,US,NC,Los Angeles,EMEA,500000,2/10 Net 30,REP011,AM003,2008-03-08,Platinum,0,EUR,1
+CUST00066,Arconic Rolled Products,FOODSERVICE,Lindenmeyr Publications,united states,MN,Seattle,apac,100000,Net 30,REP014,AM005,2019-04-06,Gold,Inactive,,1
+CUST00067,Novelis NA,Publisher,Central National,CANADA,,Boston,,1000000,Net 90,REP028,AM007,23 August 2000,Platinum,Y,GBP,0
+ CUST00068  ,Aleris Rolled Products,Packaging Converter,North American Distribution,UNITED STATES,NY,,Americas,1000000,,REP020,AM015,2004-11-17,Bronze,0,GBP,0
+CUST00069,Kaiser Aluminum,commercial printer,North American Distribution,Australia,,New York,APAC,500000,Net 45,REP027,AM010,2013-03-15,SILVER,Active,EUR,0
+CUST00070,Norsk Hydro ASA,Government,North American Distribution,CANADA,,Atlanta,EMEA,10000000,Net 30,REP011,AM002,2006-02-13,Silver,1,CAD,0
+ CUST00023,   Amazon Supply, FOODSERVICE  ,Lindenmeyr Publications,USA,WA,,Apac,  10000000,   Net 60  ,REP023,  AM012,10/27/09,Gold,1,CAD,  No 
+ CUST00001,     QUAD/GRAPHICS INC   ,Packaging Converter,  Central National  ,  USA,   FL,   New York ,APAC,1000000,Net 30,REP010,AM015,   01 June 2000 ,platinum, 1,  EUR ,0
