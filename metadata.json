@@ -1,29 +1,29 @@
 [
     {
-        "source_url" : "Customers.csv",
+        "source_url" : "refs/heads/main/data/Customers.csv",
         "sink_folder" : "RawData",
         "sink_file" : "Customers.csv"
     },
     {
-        "source_url" : "Inventory.csv",
+        "source_url" : "refs/heads/main/data/Inventory.csv",
         "sink_folder" : "RawData",
         "sink_file" : "Inventory.csv"
 
     },
     {
-        "source_url" : "Products.csv",
+        "source_url" : "refs/heads/main/data/Products.csv",
         "sink_folder" : "RawData",
         "sink_file" : "Products.csv"
 
     },
     {
-        "source_url" : "PurchaseOrders.csv",
+        "source_url" : "refs/heads/main/data/PurchaseOrders.csv",
         "sink_folder" : "RawData",
         "sink_file" : "PurchaseOrders.csv"
 
     },
     {
-        "source_url" : "SalesOrders.csv",
+        "source_url" : "refs/heads/main/data/SalesOrders.csv",
         "sink_folder" : "RawData",
         "sink_file" : "SalesOrders.csv"
 
