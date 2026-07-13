@@ -4,6 +4,8 @@ This project simulates the data pipeline for a B2B wholesale distribution busine
 
 It's built on Microsoft Fabric using a medallion architecture: raw data comes in, gets cleaned up, and lands as a star schema ready for Power BI. Along the way there are data quality checks that will actually stop the pipeline if something looks wrong, rather than just letting bad data flow through.
 
+![Alt text](imgs/pipeline.png)
+
 ## Table of Contents
 
 1. [What the project does](#1-what-the-project-does)
