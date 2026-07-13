@@ -1,0 +1,72 @@
+CustomerID,CustomerName,Segment,Division,Region,Country,State,City,AnnualRevenueTier,CreditLimit_USD,PaymentTerms,PreferredCurrency,TaxExempt,SalesRepID,AccountManagerID,ActiveFlag,CustomerSince,_gold_built_at
+CUST00001,QUAD/GRAPHICS INC,Packaging Converter,Central National,AMER,USA,FL,New York,Platinum,1000000.0,Net 30,EUR,0.0,REP010,AM015,True,2000-06-01,2026-06-24 00:14:59.277238
+CUST00002,RR Donnelley,Commercial Printer,North American Distribution,AMER,Mexico,,Minneapolis,Bronze,10000000.0,Net 90,CAD,0.0,REP014,AM011,False,2003-11-07,2026-06-24 00:14:59.277238
+CUST00003,LSC Communications,Foodservice,North American Distribution,AMER,united states,WA,,Platinum,5000000.0,Net 30,GBP,0.0,REP017,AM014,True,2019-03-01,2026-06-24 00:14:59.277238
+CUST00004,Cenveo Worldwide,Commercial Printer,Lindenmeyr Publications,AMER,US,TX,Los Angeles,Gold,100000.0,Net 45,CAD,0.0,REP039,AM009,True,2018-12-16,2026-06-24 00:14:59.277238
+CUST00005,Consolidated Graphics,<Na>,Central National,AMER,usa,PA,Minneapolis,Silver,100000.0,Net 60,GBP,0.0,REP022,AM012,,2004-08-26,2026-06-24 00:14:59.277238
+CUST00006,vistaprint nv,Industrial,North American Distribution,AMER,U.S.,CA,Chicago,<Na>,500000.0,Net 45,EUR,0.0,REP038,,False,2009-05-26,2026-06-24 00:14:59.277238
+CUST00007,Taylor Communications,<Na>,Central National,AMER,United States,IL,New York,Bronze,1000000.0,Net 60,CAD,0.0,REP038,AM009,True,2008-08-19,2026-06-24 00:14:59.277238
+CUST00008,Deluxe Corporation,Publisher,Central National,AMER,U.S.,MN,Boston,Gold,5000000.0,Net 45,GBP,0.0,REP003,AM014,,2014-03-27,2026-06-24 00:14:59.277238
+CUST00009,Multi-Color Corporation,Packaging Converter,North American Distribution,AMER,UNITED STATES,,Seattle,Silver,500000.0,Net 30,EUR,0.0,,AM014,True,2013-04-25,2026-06-24 00:14:59.277238
+CUST00010,Matthews International,Government,Central National,AMER,USA,IL,Chicago,Gold,250000.0,Net 60,CAD,1.0,REP005,AM006,False,2001-03-10,2026-06-24 00:14:59.277238
+CUST00011,Meredith Corporation,Industrial,Central National,AMER,Mexico,,Seattle,Silver,100000.0,2/10 Net 30,GBP,0.0,REP020,AM008,False,2005-04-21,2026-06-24 00:14:59.277238
+CUST00012,CONDÉ NAST,Retail,Lindenmeyr Publications,AMER,USA,IL,Seattle,Bronze,5000000.0,Net 45,EUR,1.0,REP031,AM014,False,2012-03-15,2026-06-24 00:14:59.277238
+CUST00013,Hearst Magazines,Industrial,Central National,AMER,USA,WA,Minneapolis,Platinum,500000.0,<Na>,USD,0.0,REP008,AM005,True,2002-10-14,2026-06-24 00:14:59.277238
+CUST00014,Time Inc,Industrial,Lindenmeyr Publications,AMER,United States,NY,Philadelphia,Platinum,250000.0,Net 30,CAD,0.0,REP036,AM001,True,2018-03-21,2026-06-24 00:14:59.277238
+CUST00015,Rodale Press,Retail,North American Distribution,AMER,USA,PA,Chicago,Silver,1000000.0,Net 60,,0.0,REP010,AM007,True,2000-04-26,2026-06-24 00:14:59.277238
+CUST00016,Penguin Random House,Publisher,North American Distribution,AMER,CAN,,Atlanta,<Na>,250000.0,Net 45,GBP,0.0,REP002,AM013,True,2017-11-19,2026-06-24 00:14:59.277238
+CUST00017,HarperCollins,Industrial,Central National,AMER,U.S.A,CA,Boston,Bronze,10000000.0,Net 45,EUR,0.0,,AM015,True,2017-11-04,2026-06-24 00:14:59.277238
+CUST00018,Simon & Schuster,Packaging Converter,Lindenmeyr Publications,AMER,Canada,,Atlanta,Gold,100000.0,Net 60,USD,0.0,REP040,AM010,True,2019-04-06,2026-06-24 00:14:59.277238
+CUST00019,Scholastic Corporation,<Na>,Central National,AMER,CA,,Philadelphia,Silver,100000.0,Net 90,EUR,0.0,,AM012,True,2012-09-05,2026-06-24 00:14:59.277238
+CUST00020,Houghton Mifflin,Foodservice,North American Distribution,AMER,UNITED STATES,IL,Philadelphia,Platinum,500000.0,Net 90,GBP,0.0,REP037,AM009,True,2017-10-09,2026-06-24 00:14:59.277238
+CUST00021,Staples Inc,Industrial,Central National,AMER,United States,OH,Seattle,Gold,100000.0,Net 90,CAD,0.0,REP004,,True,2005-07-12,2026-06-24 00:14:59.277238
+CUST00022,Office Depot,Packaging Converter,Central National,AMER,canada,,Los Angeles,Silver,250000.0,Net 60,CAD,1.0,REP019,AM006,True,2001-05-13,2026-06-24 00:14:59.277238
+CUST00023,Amazon Supply,Foodservice,Lindenmeyr Publications,AMER,USA,WA,,Gold,10000000.0,Net 60,CAD,0.0,REP023,AM012,True,2009-10-27,2026-06-24 00:14:59.277238
+CUST00024,Grainger WW,Packaging Converter,Central National,AMER,CA,,Seattle,Silver,-10000000.0,Net 30,EUR,0.0,REP036,AM010,False,2018-12-12,2026-06-24 00:14:59.277238
+CUST00025,HD Supply,Retail,Central National,AMER,brazil,,Philadelphia,Silver,500000.0,Net 30,GBP,0.0,REP032,AM003,,2004-08-16,2026-06-24 00:14:59.277238
+CUST00026,Walmart Stores,Office/Corporate,Central National,EMEA,germany,,New York,Silver,100000.0,Net 30,GBP,0.0,REP025,AM008,True,2012-11-27,2026-06-24 00:14:59.277238
+CUST00027,Target Corporation,Office/Corporate,North American Distribution,EMEA,GB,,Boston,Platinum,,Net 60,CAD,0.0,REP007,AM014,True,2016-04-21,2026-06-24 00:14:59.277238
+CUST00028,Costco Wholesale,Office/Corporate,North American Distribution,AMER,US,FL,Dallas,Platinum,10000000.0,2/10 Net 30,,1.0,REP006,AM010,True,2019-10-09,2026-06-24 00:14:59.277238
+CUST00029,Dollar General,Commercial Printer,North American Distribution,AMER,usa,MN,Minneapolis,Silver,500000.0,Net 90,EUR,0.0,REP022,AM010,True,2011-10-09,2026-06-24 00:14:59.277238
+CUST00030,Dollar Tree,<Na>,North American Distribution,APAC,Australia,,Seattle,Bronze,,Net 45,EUR,0.0,REP017,AM015,True,2016-02-26,2026-06-24 00:14:59.277238
+CUST00031,FedEx Office,Retail,Lindenmeyr Publications,AMER,U.S.A,MA,Seattle,Platinum,100000.0,Net 30,CAD,0.0,REP031,AM006,True,2006-03-21,2026-06-24 00:14:59.277238
+CUST00032,UPS Store,Office/Corporate,Central National,AMER,united states,PA,Miami,Gold,100000.0,Net 90,GBP,0.0,REP026,AM007,,2000-09-02,2026-06-24 00:14:59.277238
+CUST00033,Kinkos,Packaging Converter,Lindenmeyr Publications,AMER,united states,NY,Atlanta,Gold,10000000.0,2/10 Net 30,USD,1.0,REP032,AM014,True,2019-05-23,2026-06-24 00:14:59.277238
+CUST00034,alphagraphics,Publisher,North American Distribution,AMER,U.S.,TX,Atlanta,Gold,500000.0,Net 60,EUR,0.0,REP026,AM014,True,2003-04-29,2026-06-24 00:14:59.277238
+CUST00035,Sir Speedy,Publisher,Lindenmeyr Publications,EMEA,GB,,Philadelphia,Silver,10000000.0,Net 60,USD,0.0,REP015,AM014,True,,2026-06-24 00:14:59.277238
+CUST00036,Weyerhaeuser Dist,Government,Lindenmeyr Publications,AMER,US,WA,Miami,Gold,500000.0,2/10 Net 30,CAD,0.0,REP027,AM010,True,2012-09-13,2026-06-24 00:14:59.277238
+CUST00037,Home Depot,Retail,Central National,EMEA,U.K.,,Philadelphia,Gold,500000.0,Net 30,CAD,0.0,REP003,AM010,True,2014-11-03,2026-06-24 00:14:59.277238
+CUST00038,Lowe's Companies,Foodservice,Lindenmeyr Publications,AMER,united states,GA,Chicago,Silver,1000000.0,Net 45,CAD,0.0,REP021,AM007,True,2011-06-14,2026-06-24 00:14:59.277238
+CUST00039,84 Lumber,<Na>,North American Distribution,EMEA,France,,Los Angeles,Platinum,250000.0,Net 30,EUR,0.0,REP027,AM015,True,2015-11-12,2026-06-24 00:14:59.277238
+CUST00040,CARTER LUMBER,Commercial Printer,Central National,AMER,Mexico,,Chicago,Platinum,500000.0,Net 30,EUR,1.0,REP038,AM011,True,2004-04-28,2026-06-24 00:14:59.277238
+CUST00041,US Foods,Government,Lindenmeyr Publications,AMER,United States,CA,Miami,Bronze,10000000.0,2/10 Net 30,USD,0.0,REP004,AM006,True,,2026-06-24 00:14:59.277238
+CUST00042,Sysco Corporation,Packaging Converter,Central National,AMER,United States,OH,Minneapolis,Gold,10000000.0,2/10 Net 30,EUR,0.0,REP031,AM014,True,2002-06-20,2026-06-24 00:14:59.277238
+CUST00043,Performance Food Group,Retail,Central National,AMER,U.S.,MA,Boston,Platinum,1000000.0,Net 60,GBP,1.0,REP007,AM007,True,2010-04-23,2026-06-24 00:14:59.277238
+CUST00044,McLane Company,Commercial Printer,Central National,AMER,usa,OH,Minneapolis,Gold,,Net 60,CAD,0.0,,AM013,True,,2026-06-24 00:14:59.277238
+CUST00045,Core-Mark,<Na>,North American Distribution,AMER,UNITED STATES,MA,Seattle,Gold,250000.0,<Na>,GBP,0.0,REP017,AM007,True,2006-04-06,2026-06-24 00:14:59.277238
+CUST00046,Kimberly-Clark,Government,Central National,AMER,U.S.A,MA,Los Angeles,<Na>,1000000.0,<Na>,,1.0,REP020,AM012,,2016-04-19,2026-06-24 00:14:59.277238
+CUST00047,Procter & Gamble,Packaging Converter,Lindenmeyr Publications,AMER,usa,GA,Chicago,Bronze,10000000.0,Net 90,,0.0,REP040,AM005,True,2016-10-05,2026-06-24 00:14:59.277238
+CUST00048,Georgia-Pacific,Retail,<Na>,AMER,united states,CA,Chicago,Bronze,5000000.0,Net 60,EUR,0.0,REP039,AM007,False,,2026-06-24 00:14:59.277238
+CUST00049,Essity NA,Commercial Printer,North American Distribution,AMER,U.S.A,PA,Philadelphia,Silver,250000.0,Net 45,EUR,0.0,REP014,AM010,,2000-05-15,2026-06-24 00:14:59.277238
+CUST00050,Cascades Tissue,Industrial,Central National,AMER,US,OH,Los Angeles,Silver,500000.0,2/10 Net 30,EUR,0.0,REP013,AM011,True,2005-07-13,2026-06-24 00:14:59.277238
+CUST00051,Boston Globe Media,<Na>,Lindenmeyr Publications,EMEA,Deutschland,,New York,Gold,1000000.0,2/10 Net 30,USD,0.0,REP001,AM015,True,2011-11-09,2026-06-24 00:14:59.277238
+CUST00052,Tribune Publishing,<Na>,Central National,AMER,United States,IL,Philadelphia,Silver,100000.0,Net 60,EUR,0.0,REP019,,True,2008-07-05,2026-06-24 00:14:59.277238
+CUST00053,Gannett Co,Office/Corporate,Lindenmeyr Publications,AMER,USA,NC,Seattle,<Na>,1000000.0,2/10 Net 30,,0.0,REP003,AM003,True,2001-06-24,2026-06-24 00:14:59.277238
+CUST00054,Lee Enterprises,Packaging Converter,Central National,AMER,USA,GA,Minneapolis,Platinum,10000000.0,Net 30,EUR,0.0,REP032,AM012,,2003-08-01,2026-06-24 00:14:59.277238
+CUST00055,McClatchy,Foodservice,Central National,AMER,U.S.A,IL,New York,Gold,10000000.0,Net 60,USD,0.0,REP020,AM011,,,2026-06-24 00:14:59.277238
+CUST00056,Sealed Air Corp,Packaging Converter,<Na>,AMER,United States,,Boston,Bronze,,2/10 Net 30,CAD,0.0,REP001,AM013,False,2009-12-02,2026-06-24 00:14:59.277238
+CUST00057,Berry Global,Foodservice,North American Distribution,AMER,Brazil,,Atlanta,Platinum,250000.0,Net 30,USD,1.0,REP014,AM010,False,2003-01-16,2026-06-24 00:14:59.277238
+CUST00058,Greif Inc,Industrial,Central National,AMER,usa,GA,Seattle,Bronze,10000000.0,Net 30,GBP,0.0,REP036,AM014,True,2001-11-14,2026-06-24 00:14:59.277238
+CUST00059,Sonoco Products,Packaging Converter,Lindenmeyr Publications,AMER,BRA,,Minneapolis,Platinum,250000.0,Net 60,GBP,0.0,REP030,AM007,True,2009-03-18,2026-06-24 00:14:59.277238
+CUST00060,AEP Industries,Government,North American Distribution,AMER,united states,MN,Boston,Bronze,10000000.0,Net 90,GBP,0.0,REP008,AM001,False,2016-06-06,2026-06-24 00:14:59.277238
+CUST00061,Novipax LLC,Publisher,Central National,AMER,U.S.A,OH,Atlanta,Platinum,500000.0,Net 60,GBP,0.0,REP027,AM014,True,,2026-06-24 00:14:59.277238
+CUST00062,PolyOne Corp,Publisher,Central National,AMER,usa,MN,Miami,Bronze,5000000.0,2/10 Net 30,EUR,1.0,REP001,,True,2018-07-25,2026-06-24 00:14:59.277238
+CUST00063,Pregis LLC,Industrial,Central National,AMER,united states,NY,Minneapolis,Gold,250000.0,Net 45,,0.0,REP007,AM011,True,2019-09-29,2026-06-24 00:14:59.277238
+CUST00064,Free-Flow Packaging,Publisher,Central National,AMER,UNITED STATES,OH,Boston,Silver,100000.0,2/10 Net 30,USD,0.0,REP003,,False,2017-09-30,2026-06-24 00:14:59.277238
+CUST00065,Ranpak Holdings,Foodservice,Central National,AMER,US,NC,Los Angeles,Platinum,500000.0,2/10 Net 30,EUR,1.0,REP011,AM003,False,2008-03-08,2026-06-24 00:14:59.277238
+CUST00066,Arconic Rolled Products,Foodservice,Lindenmeyr Publications,AMER,united states,MN,Seattle,Gold,100000.0,Net 30,,1.0,REP014,AM005,,2019-04-06,2026-06-24 00:14:59.277238
+CUST00067,Novelis NA,Publisher,Central National,AMER,CANADA,,Boston,Platinum,1000000.0,Net 90,GBP,0.0,REP028,AM007,True,2000-08-23,2026-06-24 00:14:59.277238
+CUST00068,Aleris Rolled Products,Packaging Converter,North American Distribution,AMER,UNITED STATES,NY,,Bronze,1000000.0,<Na>,GBP,0.0,REP020,AM015,False,2004-11-17,2026-06-24 00:14:59.277238
+CUST00069,Kaiser Aluminum,Commercial Printer,North American Distribution,APAC,Australia,,New York,Silver,500000.0,Net 45,EUR,0.0,REP027,AM010,,2013-03-15,2026-06-24 00:14:59.277238
+CUST00070,Norsk Hydro ASA,Government,North American Distribution,AMER,CANADA,,Atlanta,Silver,10000000.0,Net 30,CAD,0.0,REP011,AM002,True,2006-02-13,2026-06-24 00:14:59.277238
+CUST_UNKNOWN,Unknown Customer,Unknown,,Unknown,,,,,,,,,,,,,2026-06-24 00:14:59.277238

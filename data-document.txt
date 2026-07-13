@@ -1,0 +1,76 @@
+
+Suppliers are companies who we buy raw materials from (inbound/procurement)(PurchaseOrders)
+Customers are companies who we sell these materials to(outbound/fulfillment)(Sales Orders)
+CNG sits in the middle between both of these.
+
+Sales orders csv
+OrderedQty x UnitPrice_USD  = LineTotal_USD, and DiscountPCt is not part of the LineTotal_USD.
+
+Purchase orders csv
+OrderedQty x UnitPrice_USD = TotalCost_USD and we are using OrderedQty here instead of ReveivedQty.
+FreightCost_USD is separate and not included in TotalCost_USD
+
+what is IncoTerms here?
+Incoterms (International Commercial Terms) are a standardized set of trade rules published by the International Chamber of Commerce that define who's responsible for what during a shipment between a buyer and seller — cost, risk, and logistics at each stage of the journey.
+In your PurchaseOrders.csv, the IncoTerms column tells you at what point ownership/risk transfers from the supplier to your company, and who pays for what along the way (freight, insurance, customs, etc.).
+Common ones you'll likely see in your data (given PortOfLoading is also a column, this is clearly an import-heavy dataset):
+IncotermMeaningFOB (Free On Board)Seller delivers goods onto the ship at the port of loading; buyer takes on risk/cost from that point (ocean freight, insurance, etc.)CIF (Cost, Insurance, Freight)Seller pays for shipping and insurance to the destination port; 
+risk transfers once loaded, but seller covers more of the costEXW (Ex Works)Buyer takes on almost everything — pickup from the seller's own facilityDDP (Delivered Duty Paid)Seller handles everything, including customs and duties, all the way to buyer's door — max seller 
+responsibilityFCA (Free Carrier)Seller delivers to a carrier named by the buyer, risk transfers there
+
+
+Products csv
+UOM - Unit of Measurement
+BasePrice_USD - Listed selling price per unit in USD - what you would charge a customer before any discount.
+StandardCost_USD - The company's internal cost per unit to acquire/produce the product — used as the cost basis for margin calculations. 
+HSCode - An internationally standardized numeric code (usually 6–10 digits) used to classify traded products for customs, tariffs, and trade statistics. 
+Every product crossing an international border gets one — customs authorities use it to determine duty rates and regulations. 
+It's a real-world field that pairs naturally with IncoTerms and PortOfLoading from your Purchase Orders — all three point to this being an import/export-heavy business. 
+ActiveFlag - A boolean indicating whether the product is currently active/sellable (True) or discontinued/retired (False).
+IntroducedDate - The date the product was first introduced/launched into the catalog. 
+
+What are these products? are these the ones that are brought from buyers from purchase orders?
+If so why there is a lot of difference between the BasePrice_USD and UnitPrice_USD in both PO's and SO's?
+Yeah there's a lot of gap, and its a fake data generation mistake.
+
+
+Inventory csv
+StockQty - Total physical quantity on hand at that warehouse/lot.
+AllocatedQty - How much of that stock is already reserved/committed against open sales orders but not yet shipped.
+AvailableQty - What's actually free to sell = StockQty − AllocatedQty.
+ReorderLevel - The minimum stock threshold — when StockQty drops to or below this, it's time to reorder.
+ReorderQty - How much to order when you hit the reorder point (row 0: 1220) — this is the standard reorder batch size, likely tied to supplier MOQs or economic order quantity.
+UnitCost_USD - Cost per unit of the stock actually held in this lot (e.g. $465.43/unit). Note this can differ from Products.StandardCost_USD and from what any given PO paid — i
+nventory carries whatever cost was booked when that specific lot was received, so different lots of the same product can have different unit costs (classic lot-costing behavior).
+TotalValue_USD - StockQty × UnitCost_USD — the dollar value of that inventory line (e.g. 7,442 × $465.43 ≈ $3,463,730, which matches row 0). This is your basis for inventory valuation reporting.
+LastRecievedDate - Date this lot was last replenished/received into the warehouse. 
+LastIssuedDate - Date stock was last shipped/issued out of this location — tells you how "live" or stale this particular lot is.
+ExpiryDate - Shelf-life expiration for the lot, if applicable. It's almost entirely NaN in your sample and typed as Float in the schema — that's a strong signal this product line (pulp, paper) 
+mostly doesn't expire, so this column is only populated for the subset of hazardous/perishable SKUs (ties back to IsHazardous in Products).
+BelowReorder - Boolean flag: is StockQty at or below ReorderLevel? Like AvailableQty
+LastUpdated - Timestamp this inventory record was last refreshed in the source system
+
+
+
+From looking at the data, I thought visualising these are important, since I dont have a specific problem or context
+
+- Companies like these care about gross margin which is the price we sold at - the price we bought at(there is no proper connection/keys between SO's and PO's, so
+its not recommended to do this, but instead what we can do is sum(TotalValue_USD) - sum(LineTotal_USD) per month?)
+- Are we able to meet the SO's delivery date by properly purchasing from buyers? Any lag in this?(same reason as above, no connection b/w the tables, instead try supplier lead time)
+- Supplier Lead time - How long it actually takes a supplier to deliver after you order, and whether they're late. Tells you "can I trust my suppliers to deliver on time?"
+- Customer Delivery Performance - Same idea but on the other side — are you delivering to your customers when you said you would?
+- what is fill rate? - Out of everything customers ordered, how much did you actually manage to ship? If it dips, it usually means you're running out of stock or shipping partial orders.
+- what is our revenue?  - Total money made from sales. Simple — add up all the sale amounts, and subtract anything that was returned or cancelled.
+- what products are we selling more? - Which products sell the most — either by quantity (units moved) or by dollar value (money made). Worth looking at both, because they can tell different stories (a cheap product might sell a lot of units but not make much money).
+7. Inventory Turnover
+How fast stock moves. If turnover is high, you're selling through inventory quickly (good — not much cash sitting idle on shelves). If it's low, stock is piling up and tying up money.
+In your data: This one needs an assumption, since we don't have a clean "cost of what was actually sold" — so it's an estimate, not an exact number.
+8. Inventory Value at Risk
+The dollar value of stock that's running low (below the reorder point) right now. Tells you what's about to run out and how much money is exposed to that risk.
+In your data: Already fully built — no extra work needed here.
+9. Returns Rate
+What percentage of orders come back as returns instead of staying as normal sales. High returns can point to quality issues or ordering mistakes.
+In your data: Already flagged in your data — just needs to be counted/visualized.
+10. Order Status Funnel
+A simple breakdown of how many orders are sitting in each stage — confirmed, shipped, delivered, on hold, cancelled. Useful for spotting where orders get stuck.
+

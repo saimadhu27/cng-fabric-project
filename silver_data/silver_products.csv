@@ -1,0 +1,41 @@
+ProductID,ProductName,Category,SubCategory,UOM,BasePrice_USD,StandardCost_USD,PrimarySupplierID,HSCode,WeightPerUnit_KG,IsHazardous,Division,ActiveFlag,IntroducedDate,_silver_transformed_at,gross_margin_pct,is_below_cost
+PRD0001,Bleached Softwood Kraft Pulp,Pulp,Bskp,MT,680.0,802.64,SUP0024,4813.42,78.4,False,Lindenmeyr Publications,True,2018-04-07,2026-06-24 00:14:16.766567,-18.04,True
+PRD0002,Bleached Hardwood Kraft Pulp,Pulp,Bhkp,MT,620.0,474.02,SUP0024,4798.72,,False,Central National,True,2013-01-18,2026-06-24 00:14:16.766567,23.55,False
+PRD0003,Fluff Pulp,Pulp,Fluff,MT,750.0,541.48,SUP0013,,796.5,True,Central National,False,2013-12-11,2026-06-24 00:14:16.766567,27.8,False
+PRD0004,Dissolving Pulp,Pulp,Dissolving,MT,900.0,,SUP0029,4777.96,917.1,False,Lindenmeyr Publications,True,2019-09-01,2026-06-24 00:14:16.766567,,False
+PRD0005,Uncoated Woodfree A4 80gsm,Printing Paper,Uwf,REAM,4.5,,SUP0025,4818.81,663.8,False,North American Distribution,True,2016-12-01,2026-06-24 00:14:16.766567,,False
+PRD0006,Uncoated Woodfree A3 80gsm,Printing Paper,Uwf,REAM,8.9,5.59,SUP0029,4727.14,316.4,False,Central National,True,2014-05-05,2026-06-24 00:14:16.766567,37.19,False
+PRD0007,Coated Woodfree Gloss 90gsm,Printing Paper,Cwf,MT,920.0,588.05,SUP0036,4708.34,636.1,False,Lindenmeyr Publications,True,2014-07-29,2026-06-24 00:14:16.766567,36.08,False
+PRD0008,Coated Woodfree Matt 115gsm,Printing Paper,Cwf,MT,980.0,697.45,SUP0032,4797.65,483.0,False,Lindenmeyr Publications,True,,2026-06-24 00:14:16.766567,28.83,False
+PRD0009,Newsprint 45gsm,Printing Paper,Newsprint,MT,480.0,338.9,SUP9908,,260.7,False,,False,2016-12-07,2026-06-24 00:14:16.766567,29.4,False
+PRD0010,Magazine Paper LWC 57gsm,Printing Paper,Lwc,MT,,542.38,SUP0038,4721.19,897.2,False,Lindenmeyr Publications,True,2016-03-27,2026-06-24 00:14:16.766567,,False
+PRD0011,Offset Printing Paper 70gsm,Printing Paper,Offset,MT,830.0,566.24,SUP0034,4787.8,279.9,False,Central National,True,,2026-06-24 00:14:16.766567,31.78,False
+PRD0012,Corrugated Medium Fluting,Packaging,Containerboard,MT,,397.25,SUP0025,4776.6,479.5,False,Central National,True,2018-11-08,2026-06-24 00:14:16.766567,,False
+PRD0013,Kraftliner Brown 125gsm,Packaging,Containerboard,MT,,369.65,SUP0001,4755.56,791.6,False,Central National,True,2017-02-19,2026-06-24 00:14:16.766567,,False
+PRD0014,Coated Duplex Board 300gsm,Packaging,Cartonboard,MT,780.0,592.98,SUP0017,4729.78,940.8,False,Lindenmeyr Publications,True,2015-05-31,2026-06-24 00:14:16.766567,23.98,False
+PRD0015,Folding Box Board 240gsm,Packaging,Cartonboard,MT,820.0,511.39,SUP0016,4744.17,154.3,False,North American Distribution,True,2019-05-02,2026-06-24 00:14:16.766567,37.64,False
+PRD0016,Bubble Wrap Roll 500mm,Packaging,Protective,ROLL,45.0,33.72,SUP9912,4703.48,949.5,False,North American Distribution,True,2016-06-25,2026-06-24 00:14:16.766567,25.07,False
+PRD0017,Stretch Film 17mic 500mm,Packaging,Stretch Film,ROLL,28.0,,SUP0013,4817.94,324.5,False,Central National,True,2013-01-13,2026-06-24 00:14:16.766567,,False
+PRD0018,Tissue Jumbo Roll Parent,Tissue,Jumbo Roll,MT,1100.0,857.84,SUP0008,,183.8,False,Lindenmeyr Publications,True,2020-03-13,2026-06-24 00:14:16.766567,22.01,False
+PRD0019,Facial Tissue 2ply 200 sheets,Tissue,Consumer,CASE,22.0,,SUP0038,4703.78,,False,Central National,True,2013-11-12,2026-06-24 00:14:16.766567,,False
+PRD0020,PAPER TOWEL ROLL 2PLY,Tissue,Away From Home,CASE,18.0,11.84,SUP0010,4782.92,819.0,False,Central National,True,,2026-06-24 00:14:16.766567,34.22,False
+PRD0021,Toilet Tissue 2ply 96 rolls,Tissue,Consumer,CASE,30.0,21.07,SUP0034,4777.8,195.4,False,Lindenmeyr Publications,True,2014-01-01,2026-06-24 00:14:16.766567,29.77,False
+PRD0022,Softwood Lumber 2x4 8ft,Wood Products,Lumber,MBF,680.0,469.34,SUP0015,4732.56,882.6,False,Lindenmeyr Publications,True,2014-10-16,2026-06-24 00:14:16.766567,30.98,False
+PRD0023,Plywood 18mm 4x8ft,Wood Products,Panel,SHEET,42.0,31.41,SUP0040,4795.8,524.6,False,Lindenmeyr Publications,True,2020-06-26,2026-06-24 00:14:16.766567,25.21,False
+PRD0024,OSB 11mm,Wood Products,Panel,SHEET,,18.43,SUP0027,4717.1,225.5,False,North American Distribution,True,2013-04-03,2026-06-24 00:14:16.766567,,False
+PRD0025,MDF 16mm,Wood Products,Panel,SHEET,35.0,24.49,SUP0026,4805.84,435.1,False,Central National,False,2018-09-02,2026-06-24 00:14:16.766567,30.03,False
+PRD0026,Structural Steel HEA 200,Metals,Steel,MT,,539.11,SUP0019,4726.68,871.0,False,,True,2013-11-06,2026-06-24 00:14:16.766567,,False
+PRD0027,Aluminum Sheet 3mm 1500x3000,Metals,Aluminum,MT,2600.0,1677.32,SUP0020,4755.21,488.3,False,Central National,True,2015-12-06,2026-06-24 00:14:16.766567,35.49,False
+PRD0028,Stainless Steel Coil 2B 304,Metals,Stainless,MT,3100.0,2196.14,SUP0032,4708.21,445.3,False,North American Distribution,True,2011-01-10,2026-06-24 00:14:16.766567,29.16,False
+PRD0029,Aluminum Extrusion 6063-T5,Metals,Aluminum,MT,,1916.22,SUP9971,4709.38,531.9,False,North American Distribution,True,2010-11-26,2026-06-24 00:14:16.766567,,False
+PRD0030,Spunbond PP Nonwoven 20gsm,Nonwovens,Spunbond,MT,1200.0,771.86,SUP0024,4788.9,686.0,False,Central National,True,2018-06-21,2026-06-24 00:14:16.766567,35.68,False
+PRD0031,Airlaid Nonwoven 60gsm,Nonwovens,Airlaid,MT,1450.0,1050.67,SUP0034,4722.65,624.1,False,Lindenmeyr Publications,True,,2026-06-24 00:14:16.766567,27.54,False
+PRD0032,Recycled OCC Grade 11,Recycled Fiber,Occ,MT,,158.64,SUP0004,4773.11,657.1,False,North American Distribution,True,2015-09-04,2026-06-24 00:14:16.766567,,False
+PRD0033,Recycled ONP Grade 6,Recycled Fiber,Onp,MT,90.0,,SUP0016,4805.32,348.7,False,Lindenmeyr Publications,True,2019-04-30,2026-06-24 00:14:16.766567,,False
+PRD0034,Recycled Deinked Pulp,Recycled Fiber,Dip,MT,310.0,202.74,SUP0030,4822.18,,False,Lindenmeyr Publications,False,2015-04-14,2026-06-24 00:14:16.766567,34.6,False
+PRD0035,Copy Paper 75gsm Carton,Printing Paper,Copy,CARTON,38.0,24.78,SUP0012,4757.26,188.6,False,North American Distribution,True,2015-12-04,2026-06-24 00:14:16.766567,34.79,False
+PRD0036,Envelope C4 White Box 250,Printing Paper,Envelopes,BOX,12.0,8.47,SUP0035,4701.98,862.0,False,Central National,True,2020-08-02,2026-06-24 00:14:16.766567,29.42,False
+PRD0037,Label Stock Gloss 80gsm,Packaging,Labels,MT,1050.0,,SUP0023,4812.88,569.8,False,Lindenmeyr Publications,True,2010-07-10,2026-06-24 00:14:16.766567,,False
+PRD0038,KRAFT PAPER BROWN 90GSM,Packaging,Kraft,MT,,477.86,SUP0027,4791.92,887.2,False,North American Distribution,True,2021-02-23,2026-06-24 00:14:16.766567,,False
+PRD0039,Grease-Proof Paper 40gsm,Packaging,Specialty,MT,,687.64,SUP0037,4729.97,301.1,False,North American Distribution,True,2017-02-27,2026-06-24 00:14:16.766567,,False
+PRD0040,Thermal Paper Roll 80mm,Printing Paper,Thermal,ROLL,6.5,4.91,SUP0024,4820.18,385.3,False,North American Distribution,True,2016-12-09,2026-06-24 00:14:16.766567,24.46,False
