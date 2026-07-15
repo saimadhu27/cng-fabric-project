@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "CNG_Analytics"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b1297065-c6d9-4079-9fdc-5fd7d64ee4c2"
+  }
+}

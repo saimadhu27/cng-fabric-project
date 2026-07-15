@@ -1,0 +1,177 @@
+table dim_customer
+	lineageTag: 33cad2ce-7522-4a78-9740-b4b5dede5578
+
+	column CustomerID
+		dataType: string
+		lineageTag: b03be399-81aa-4623-8135-635e42138aae
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: 602ea656-381c-4836-839c-73d83074ca6d
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: string
+		lineageTag: 46b1c507-5fd6-439d-b4c4-3383e90a0539
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Division
+		dataType: string
+		lineageTag: 43a77860-c7ad-47c4-93ae-90d34231a550
+		summarizeBy: none
+		sourceColumn: Division
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: dcfca307-b036-4c9c-b26f-4018a5219104
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 56248ce0-c298-4b45-9308-5bfa0fbff615
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 2444e63e-6785-411c-aab5-0bd839e099dd
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: 8764ca4e-0be3-4ca5-bdd7-e20ce9d208ea
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnnualRevenueTier
+		dataType: string
+		lineageTag: da10c49e-bd1d-4d9e-a39a-30a8ca1fba36
+		summarizeBy: none
+		sourceColumn: AnnualRevenueTier
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreditLimit_USD
+		dataType: double
+		lineageTag: 8358ec98-8d38-46d8-a206-5f708ae7ea7a
+		summarizeBy: sum
+		sourceColumn: CreditLimit_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PaymentTerms
+		dataType: string
+		lineageTag: a2526982-2a60-4029-882f-bfc9a2ae2cfe
+		summarizeBy: none
+		sourceColumn: PaymentTerms
+
+		annotation SummarizationSetBy = Automatic
+
+	column PreferredCurrency
+		dataType: string
+		lineageTag: ea3237c0-31d6-4cb6-97d1-77e8cf1c43ce
+		summarizeBy: none
+		sourceColumn: PreferredCurrency
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaxExempt
+		dataType: double
+		lineageTag: 524dbe12-7fec-453d-ac53-2135f98844eb
+		summarizeBy: sum
+		sourceColumn: TaxExempt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalesRepID
+		dataType: string
+		lineageTag: d15d5a3b-9fa6-4812-8582-a6c98926ff2c
+		summarizeBy: none
+		sourceColumn: SalesRepID
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountManagerID
+		dataType: string
+		lineageTag: b83f404b-9a82-48f4-9903-c67978a61062
+		summarizeBy: none
+		sourceColumn: AccountManagerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ActiveFlag
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e47b2e5e-6715-4139-ba48-c55c7bf989e8
+		summarizeBy: none
+		sourceColumn: ActiveFlag
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerSince
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 14a4907f-249b-4367-a589-5c550faec3f6
+		summarizeBy: none
+		sourceColumn: CustomerSince
+
+		variation Variation
+			isDefault
+			relationship: 90ce3f25-781a-4c65-8310-c462bf204c0e
+			defaultHierarchy: LocalDateTable_4933fe1d-2284-4b60-ae5c-18a0ca51a827.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column _gold_built_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e693cde0-669c-4e7f-9908-251e1e2e7eae
+		summarizeBy: none
+		sourceColumn: _gold_built_at
+
+		variation Variation
+			isDefault
+			relationship: 2ab93309-c569-464d-9f6f-637bc1b0ac61
+			defaultHierarchy: LocalDateTable_238e7b24-ca1d-43f9-8a7c-83d2aea155e4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customer = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("zbnx2xrejrgundwjobz5inadya-jtuissgdxbquvcrypvtvhkmioq.datawarehouse.fabric.microsoft.com", "gold_lakehouse"),
+				    dbo_dim_customer = Source{[Schema="dbo",Item="dim_customer"]}[Data]
+				in
+				    dbo_dim_customer
+
+	annotation PBI_ResultType = Table
+

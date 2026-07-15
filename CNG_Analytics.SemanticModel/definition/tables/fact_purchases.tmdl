@@ -1,0 +1,264 @@
+table fact_purchases
+	lineageTag: c9e37b85-8eda-4a84-a82e-8db60723e397
+
+	measure 'OnTime Rate Pct' = ```
+			DIVIDE(
+			    CALCULATE(COUNTROWS(fact_purchases), fact_purchases[is_late_delivery] = 0), 
+			    CALCULATE(COUNTROWS(fact_purchases), NOT ISBLANK(fact_purchases[is_late_delivery])))*100
+			```
+		lineageTag: 1e11951c-30da-44be-acbd-a36b29fdd149
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Percentage of purchase orders delivered on or before the expected delivery date. Derived from is_late_delivery, which compares actual_lead_time_days to expected_lead_time_days.
+	measure 'Supplier On-Time Rate' = 1 - AVERAGE(fact_purchases[is_late_delivery])
+		formatString: 0.0%
+		displayFolder: KPIs
+		lineageTag: cf2dbfb8-18ce-42a0-a8d7-9a4c177d2d50
+
+	column POID
+		dataType: string
+		lineageTag: 16e1f3f6-8da7-4b69-96a2-852346e9ab85
+		summarizeBy: none
+		sourceColumn: POID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ae40b8ac-226d-4e1f-8fa0-d8e9e5fc5e0f
+		summarizeBy: count
+		sourceColumn: OrderDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5c0708fe-05c7-4cd0-bfb3-2f0c642bbd81
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variation
+			isDefault
+			relationship: 000777a6-7997-40e6-877f-25eec3861259
+			defaultHierarchy: LocalDateTable_61bc732b-a182-45d2-83ed-fe6d48cb579e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SupplierID
+		dataType: string
+		lineageTag: 6476fb0e-c8ee-4ceb-9786-37762be67ce5
+		summarizeBy: none
+		sourceColumn: SupplierID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: string
+		lineageTag: a372dc7a-67f3-434d-95db-4add10dda13e
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 813ef0f6-7da5-4fb8-b18d-3eccebc59e74
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column ApprovalStatus
+		dataType: string
+		lineageTag: 833dbf99-ddc4-4b6c-9b92-b18e52b86d7c
+		summarizeBy: none
+		sourceColumn: ApprovalStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency
+		dataType: string
+		lineageTag: 2b7a3570-e6f3-498c-8912-60db6ec0dc67
+		summarizeBy: none
+		sourceColumn: Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column IncoTerms
+		dataType: string
+		lineageTag: b4997c00-10a4-43ec-810b-22958279a736
+		summarizeBy: none
+		sourceColumn: IncoTerms
+
+		annotation SummarizationSetBy = Automatic
+
+	column PortOfLoading
+		dataType: string
+		lineageTag: 6f3c1934-e5ab-4af8-b413-36043553562f
+		summarizeBy: none
+		sourceColumn: PortOfLoading
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderedQty
+		dataType: double
+		lineageTag: fe54bdb5-0072-4ae9-a1fa-445922d3237f
+		summarizeBy: sum
+		sourceColumn: OrderedQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReceivedQty
+		dataType: double
+		lineageTag: 731b61cf-c0e4-4c5c-9bf4-c4e22f7cfdc3
+		summarizeBy: sum
+		sourceColumn: ReceivedQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column receipt_rate
+		dataType: double
+		lineageTag: d67237d3-8a5f-4825-af40-122d94c3baaa
+		summarizeBy: sum
+		sourceColumn: receipt_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitCost_USD
+		dataType: double
+		lineageTag: fe7b7c26-9bb0-4ad2-ba77-f148d8846cdb
+		summarizeBy: sum
+		sourceColumn: UnitCost_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalCost_USD
+		dataType: double
+		lineageTag: ad876704-e6f3-4b77-8f5d-6f0cd180eaec
+		summarizeBy: sum
+		sourceColumn: TotalCost_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FreightCost_USD
+		dataType: double
+		lineageTag: 1b821412-5a60-4438-9afd-07aeeaad50d5
+		summarizeBy: sum
+		sourceColumn: FreightCost_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ExchangeRate
+		dataType: double
+		lineageTag: 64b6a57a-eba5-4214-9723-4b31f87ba0b7
+		summarizeBy: sum
+		sourceColumn: ExchangeRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ExpectedDeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cc95937f-34b6-418e-a990-0e52a83267b2
+		summarizeBy: none
+		sourceColumn: ExpectedDeliveryDate
+
+		variation Variation
+			isDefault
+			relationship: 3cfd3407-2de9-4749-b11a-b417a81becce
+			defaultHierarchy: LocalDateTable_498e51a5-f6ef-413a-8dce-e295da090c24.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ActualDeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ebecee3c-e638-47b7-b068-6e152189d0ac
+		summarizeBy: none
+		sourceColumn: ActualDeliveryDate
+
+		variation Variation
+			isDefault
+			relationship: eb011fb4-fe67-453f-a63f-f37833d870a7
+			defaultHierarchy: LocalDateTable_c983e230-4d65-4094-8bc8-f05fc6b4757b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column expected_lead_time_days
+		dataType: double
+		lineageTag: 902ea80d-c6f5-4c2b-9510-85e728d6d635
+		summarizeBy: sum
+		sourceColumn: expected_lead_time_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_lead_time_days
+		dataType: double
+		lineageTag: 8d37ad63-4e7b-4260-9b4d-26c3b72ac565
+		summarizeBy: sum
+		sourceColumn: actual_lead_time_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_late_delivery
+		dataType: double
+		lineageTag: 49ef6a70-31fc-4253-8924-bd8d22cb5242
+		summarizeBy: sum
+		sourceColumn: is_late_delivery
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column _gold_built_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2985a52a-a32f-4989-8657-c26c8ddbdc3d
+		summarizeBy: none
+		sourceColumn: _gold_built_at
+
+		variation Variation
+			isDefault
+			relationship: 90ab46c9-2200-47dc-af61-7ba68e196ed6
+			defaultHierarchy: LocalDateTable_e8650d1f-b8cc-47d7-95cf-d14a972afeae.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_purchases = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("zbnx2xrejrgundwjobz5inadya-jtuissgdxbquvcrypvtvhkmioq.datawarehouse.fabric.microsoft.com", "gold_lakehouse"),
+				    dbo_fact_purchases = Source{[Schema="dbo",Item="fact_purchases"]}[Data]
+				in
+				    dbo_fact_purchases
+
+	annotation PBI_ResultType = Table
+

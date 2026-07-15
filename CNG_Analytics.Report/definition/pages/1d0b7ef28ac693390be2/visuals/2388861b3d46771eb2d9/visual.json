@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "2388861b3d46771eb2d9",
+  "position": {
+    "x": 695.4666666666667,
+    "y": 15.644444444444444,
+    "z": 4,
+    "height": 199.11111111111111,
+    "width": 210.48888888888888,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "card",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_inventory"
+                    }
+                  },
+                  "Property": "Inventory Value at Risk"
+                }
+              },
+              "queryRef": "fact_inventory.Inventory Value at Risk",
+              "nativeQueryRef": "Inventory Value at Risk"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8d96825764243be85010",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_inventory"
+              }
+            },
+            "Property": "Inventory Value at Risk"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

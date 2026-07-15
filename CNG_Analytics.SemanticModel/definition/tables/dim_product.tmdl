@@ -1,0 +1,170 @@
+table dim_product
+	lineageTag: 81214790-9240-4286-8400-8109f42e1b98
+
+	column ProductID
+		dataType: string
+		lineageTag: e013f9c8-6c52-4e20-8761-2bb0e77c5dbe
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 8dbed1d3-b382-45e6-94b0-412c3016b816
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 1fd82bb4-3664-47d7-af31-4acc706a9e60
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategory
+		dataType: string
+		lineageTag: d5613a69-cd01-4c8f-bd93-502c92a87b4f
+		summarizeBy: none
+		sourceColumn: SubCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column UOM
+		dataType: string
+		lineageTag: 6f01995c-1609-461d-afb4-ffa5c951a283
+		summarizeBy: none
+		sourceColumn: UOM
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasePrice_USD
+		dataType: double
+		lineageTag: 9093b57c-77cd-4c53-b867-f2b2ea3683c3
+		summarizeBy: sum
+		sourceColumn: BasePrice_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StandardCost_USD
+		dataType: double
+		lineageTag: 636667af-dc91-4a48-9aa3-ef0028d58f74
+		summarizeBy: sum
+		sourceColumn: StandardCost_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gross_margin_pct
+		dataType: double
+		lineageTag: 4faad19e-a44b-4d8a-be3a-b03a7bc83604
+		summarizeBy: sum
+		sourceColumn: gross_margin_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_below_cost
+		dataType: double
+		lineageTag: 1c262053-6356-458d-9036-712214fccfbc
+		summarizeBy: sum
+		sourceColumn: is_below_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrimarySupplierID
+		dataType: string
+		lineageTag: 134d8e20-54b6-4ace-b7e5-0d0bc66964b8
+		summarizeBy: none
+		sourceColumn: PrimarySupplierID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Division
+		dataType: string
+		lineageTag: edb3bb5b-8a0d-4bcc-a86e-9657f880d178
+		summarizeBy: none
+		sourceColumn: Division
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeightPerUnit_KG
+		dataType: double
+		lineageTag: a4624bba-4cc5-458c-9bd7-435606469183
+		summarizeBy: sum
+		sourceColumn: WeightPerUnit_KG
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsHazardous
+		dataType: double
+		lineageTag: 42c7430b-b300-46c5-8784-bf0da4050458
+		summarizeBy: sum
+		sourceColumn: IsHazardous
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ActiveFlag
+		dataType: double
+		lineageTag: bc10e321-caae-4559-a593-e3c05c9dfc8b
+		summarizeBy: sum
+		sourceColumn: ActiveFlag
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IntroducedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6c517e69-e779-4d36-908a-ca6c714d0b51
+		summarizeBy: none
+		sourceColumn: IntroducedDate
+
+		variation Variation
+			isDefault
+			relationship: f011e07a-a1ba-476c-947f-819f6dd342ad
+			defaultHierarchy: LocalDateTable_1cb78a43-e50e-45ec-ac26-6c705ad34471.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column _gold_built_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 249433fb-790d-4bee-b585-be5a05e9ab9c
+		summarizeBy: none
+		sourceColumn: _gold_built_at
+
+		variation Variation
+			isDefault
+			relationship: 1b6feb30-b0f3-4e77-9167-be61a859857a
+			defaultHierarchy: LocalDateTable_da018aa1-b93c-4c86-addb-92ccc10e7711.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_product = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("zbnx2xrejrgundwjobz5inadya-jtuissgdxbquvcrypvtvhkmioq.datawarehouse.fabric.microsoft.com", "gold_lakehouse"),
+				    dbo_dim_product = Source{[Schema="dbo",Item="dim_product"]}[Data]
+				in
+				    dbo_dim_product
+
+	annotation PBI_ResultType = Table
+

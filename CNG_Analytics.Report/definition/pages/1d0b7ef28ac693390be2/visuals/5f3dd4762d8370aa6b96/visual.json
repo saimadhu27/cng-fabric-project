@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "5f3dd4762d8370aa6b96",
+  "position": {
+    "x": 448,
+    "y": 15.644444444444444,
+    "z": 3,
+    "height": 197.6888888888889,
+    "width": 210.48888888888888,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "card",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_purchases"
+                    }
+                  },
+                  "Property": "Supplier On-Time Rate"
+                }
+              },
+              "queryRef": "fact_purchases.Supplier On-Time Rate",
+              "nativeQueryRef": "Supplier On-Time Rate"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "da3c52a9d1f4ba541213",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_purchases"
+              }
+            },
+            "Property": "Supplier On-Time Rate"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

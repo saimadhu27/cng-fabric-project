@@ -1,0 +1,228 @@
+table fact_inventory
+	lineageTag: 95edf81b-dd9c-46c0-a623-6b9a291ab8de
+
+	/// Dollar value of inventory lots currently at or below their reorder level (BelowReorder = TRUE). Highlights stock at risk of running out.
+	measure 'Inventory Value at Risk' = SUM(fact_inventory[ValueBelowReorder_USD])
+		formatString: \$#,##0
+		displayFolder: KPIs
+		lineageTag: f7eec5fa-5e2b-45a1-957e-a72ecebc3d12
+
+	column InventoryID
+		dataType: string
+		lineageTag: 2bf4460b-b95b-4e3f-81fa-e1e30ebee134
+		summarizeBy: none
+		sourceColumn: InventoryID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SnapshotDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c92b2382-c884-4bab-8a0d-6e91a4d01bec
+		summarizeBy: count
+		sourceColumn: SnapshotDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastUpdated
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 073c36e8-cd36-4516-8a0d-22fb245bed10
+		summarizeBy: none
+		sourceColumn: LastUpdated
+
+		variation Variation
+			isDefault
+			relationship: ed8bc425-5ba9-4860-b5d4-046fcd1152a0
+			defaultHierarchy: LocalDateTable_cbf3cbce-f178-44e8-98fb-1c5a34579a58.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ProductID
+		dataType: string
+		lineageTag: cdee2d10-5c0f-487d-873b-157dd66a5c26
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column WarehouseID
+		dataType: string
+		lineageTag: 8a9d4981-31ec-4e06-9306-fd420009fd17
+		summarizeBy: none
+		sourceColumn: WarehouseID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StorageLocation
+		dataType: string
+		lineageTag: af61faff-1048-4d32-b7ab-e4eac44d553f
+		summarizeBy: none
+		sourceColumn: StorageLocation
+
+		annotation SummarizationSetBy = Automatic
+
+	column LotNumber
+		dataType: string
+		lineageTag: db0bb08e-60e4-48d6-bd94-bf47ab0a8a5d
+		summarizeBy: none
+		sourceColumn: LotNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockQty
+		dataType: double
+		lineageTag: a27e4f0f-9de0-4ac4-be95-85882e61ffc1
+		summarizeBy: sum
+		sourceColumn: StockQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AllocatedQty
+		dataType: double
+		lineageTag: d54fd1ae-3b09-40ae-a03c-b0ec98f5b169
+		summarizeBy: sum
+		sourceColumn: AllocatedQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AvailableQty
+		dataType: double
+		lineageTag: d16bd3bd-4fdb-49cd-8ac1-9e29d334380f
+		summarizeBy: sum
+		sourceColumn: AvailableQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReorderLevel
+		dataType: double
+		lineageTag: 21d1f27c-29e4-4fa2-a426-6fa949ca1691
+		summarizeBy: sum
+		sourceColumn: ReorderLevel
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReorderQty
+		dataType: double
+		lineageTag: bbfd57a9-0b3b-4ace-b31a-86976df76e19
+		summarizeBy: sum
+		sourceColumn: ReorderQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BelowReorder
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f89a5863-12c8-4e51-9514-2c69a1020fb4
+		summarizeBy: none
+		sourceColumn: BelowReorder
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitCost_USD
+		dataType: double
+		lineageTag: d3648df9-eff5-437d-a8b4-b5a1f3039bbc
+		summarizeBy: sum
+		sourceColumn: UnitCost_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalValue_USD
+		dataType: double
+		lineageTag: c717f9b5-0613-4862-870f-159076a4eb1c
+		summarizeBy: sum
+		sourceColumn: TotalValue_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValueBelowReorder_USD
+		dataType: double
+		lineageTag: db751e59-91ee-414c-aa52-fdd0865d368a
+		summarizeBy: sum
+		sourceColumn: ValueBelowReorder_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LastReceivedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 17ce1b6f-e27c-41ac-91f3-344860579ba4
+		summarizeBy: none
+		sourceColumn: LastReceivedDate
+
+		variation Variation
+			isDefault
+			relationship: 89d45919-e170-4707-9dc3-755abacf859a
+			defaultHierarchy: LocalDateTable_d0a57dbd-c5ca-41a3-b940-1d42be091777.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column LastIssuedDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 2eeae9ff-028e-443a-a260-b367d5926401
+		summarizeBy: none
+		sourceColumn: LastIssuedDate
+
+		variation Variation
+			isDefault
+			relationship: 22335225-ba7b-4238-ba13-0957407cf713
+			defaultHierarchy: LocalDateTable_13a9c569-3543-4467-9ec6-ebfb1e36d8c7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ExpiryDate
+		dataType: string
+		lineageTag: 5ccb9034-8eb2-4ee0-9d1a-f75bf496112d
+		summarizeBy: none
+		sourceColumn: ExpiryDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column _gold_built_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 962f27ea-71f9-4e88-950a-0f73eee2b708
+		summarizeBy: none
+		sourceColumn: _gold_built_at
+
+		variation Variation
+			isDefault
+			relationship: 6d8c921c-9e63-4bbf-af42-896a7cd35abb
+			defaultHierarchy: LocalDateTable_a59a41cc-5872-48ba-b863-821feaadb70f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_inventory = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("zbnx2xrejrgundwjobz5inadya-jtuissgdxbquvcrypvtvhkmioq.datawarehouse.fabric.microsoft.com", "gold_lakehouse"),
+				    dbo_fact_inventory = Source{[Schema="dbo",Item="fact_inventory"]}[Data]
+				in
+				    dbo_fact_inventory
+
+	annotation PBI_ResultType = Table
+

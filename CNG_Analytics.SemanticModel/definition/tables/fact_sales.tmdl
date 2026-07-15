@@ -1,0 +1,225 @@
+table fact_sales
+	lineageTag: 2b90e25d-d78a-45d0-9c5b-768a36ba5655
+
+	/// Total net sales revenue, already adjusted for returns since NetAmount_USD flips negative when is_return is true.
+	measure 'Net Revenue' = SUM(fact_sales[NetAmount_USD])
+		formatString: \$#,##0
+		displayFolder: KPIs
+		lineageTag: a1ac364b-1284-4bb2-8391-5cd1c361fd8c
+
+	/// Share of sales orders flagged as returns (is_return = TRUE), out of all sales orders. High values can signal quality issues or order-entry mistakes.
+	measure 'Returns Rate' = DIVIDE(CALCULATE(COUNTROWS(fact_sales), fact_sales[is_return] = TRUE), COUNTROWS(fact_sales))
+		formatString: 0.0%
+		displayFolder: KPIs
+		lineageTag: d99b09b2-5af7-4af1-9415-0cb6cc75a6e3
+
+	column OrderID
+		dataType: string
+		lineageTag: 41c1e7a3-dbd1-446a-bc91-a4e76cc67a31
+		summarizeBy: none
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 49fcd187-c824-4e88-9fcb-a95273bb02fe
+		summarizeBy: count
+		sourceColumn: OrderDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7083cb50-3526-4976-883a-63a41c08311c
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variation
+			isDefault
+			relationship: d5b00b32-a480-47fd-bf54-454eaf8fa0d1
+			defaultHierarchy: LocalDateTable_7a1eebb8-6bc5-40c7-a07d-333bcb39271e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CustomerID
+		dataType: string
+		lineageTag: a21fa6c6-9471-462c-a918-5b6eaec9496c
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductID
+		dataType: string
+		lineageTag: 4a2b0ddd-9f60-4023-aa06-04f42cece3e4
+		summarizeBy: none
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Division
+		dataType: string
+		lineageTag: 4c382d28-76ba-42d7-bb1f-373b48dadfe3
+		summarizeBy: none
+		sourceColumn: Division
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesChannel
+		dataType: string
+		lineageTag: b472d1fb-b58a-496a-9609-160be16c5e6e
+		summarizeBy: none
+		sourceColumn: SalesChannel
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesRepID
+		dataType: string
+		lineageTag: 0c04b45f-d6ff-4ddb-a85a-c67a1fa0f4d3
+		summarizeBy: none
+		sourceColumn: SalesRepID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 0f69b1db-1397-4a1a-b12a-cfafff580030
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderedQty
+		dataType: double
+		lineageTag: 65f7a653-1849-4e7d-a2a1-70edc86539e5
+		summarizeBy: sum
+		sourceColumn: OrderedQty
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPrice_USD
+		dataType: double
+		lineageTag: 1c4b0eaa-61de-4165-b00c-d388265b6d68
+		summarizeBy: sum
+		sourceColumn: UnitPrice_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountPct
+		dataType: double
+		lineageTag: 5c166cde-a466-4b11-bfb2-b82baf9be966
+		summarizeBy: sum
+		sourceColumn: DiscountPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discounted_unit_price
+		dataType: double
+		lineageTag: f20b69ec-db7c-42e6-842b-f6797b398ec4
+		summarizeBy: sum
+		sourceColumn: discounted_unit_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LineTotal_USD
+		dataType: double
+		lineageTag: 325bc139-4710-4ad8-8123-cc000eb6d429
+		summarizeBy: sum
+		sourceColumn: LineTotal_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column calc_line_total_usd
+		dataType: double
+		lineageTag: febb0204-586b-4ca2-9450-ca6e754c820b
+		summarizeBy: sum
+		sourceColumn: calc_line_total_usd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetAmount_USD
+		dataType: double
+		lineageTag: 5543122c-1308-4da8-8035-d75ef7ea9a9c
+		summarizeBy: sum
+		sourceColumn: NetAmount_USD
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_return
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 00b76f5a-9378-4659-9d88-a137f350b270
+		summarizeBy: none
+		sourceColumn: is_return
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsRush
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c253b660-26fa-42c4-9e5b-d16a21fe0551
+		summarizeBy: none
+		sourceColumn: IsRush
+
+		annotation SummarizationSetBy = Automatic
+
+	column RequestedDeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 26a2934b-c227-4a3a-b46e-b6009f1d77d2
+		summarizeBy: none
+		sourceColumn: RequestedDeliveryDate
+
+		variation Variation
+			isDefault
+			relationship: c73f3ac5-c8ea-4bc5-89d1-91597392c0d2
+			defaultHierarchy: LocalDateTable_449ad48f-7e30-47d1-8ee5-7a663764f1e6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column _gold_built_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d1549720-7614-4ad1-b6ce-1bc738f4aff3
+		summarizeBy: none
+		sourceColumn: _gold_built_at
+
+		variation Variation
+			isDefault
+			relationship: 45a4eafd-31f2-419a-8ce0-521303b9a4c3
+			defaultHierarchy: LocalDateTable_37a6bd98-1ba0-42d2-b8b0-fbde97f3602a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_sales = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("zbnx2xrejrgundwjobz5inadya-jtuissgdxbquvcrypvtvhkmioq.datawarehouse.fabric.microsoft.com", "gold_lakehouse"),
+				    dbo_fact_sales = Source{[Schema="dbo",Item="fact_sales"]}[Data]
+				in
+				    dbo_fact_sales
+
+	annotation PBI_ResultType = Table
+

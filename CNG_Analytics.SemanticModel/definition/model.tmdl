@@ -1,0 +1,41 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["dim_customer","dim_date","dim_product","fact_inventory","fact_purchases","fact_sales"]
+
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
+
+ref table dim_customer
+ref table DateTableTemplate_01bb9bd7-a3eb-40e0-a752-af719a65f72d
+ref table LocalDateTable_4933fe1d-2284-4b60-ae5c-18a0ca51a827
+ref table LocalDateTable_238e7b24-ca1d-43f9-8a7c-83d2aea155e4
+ref table dim_date
+ref table LocalDateTable_e8fa0d96-e9be-47ee-9296-c75b3baa19b0
+ref table LocalDateTable_84b2bac7-b797-4184-a830-60098ed95d57
+ref table dim_product
+ref table LocalDateTable_1cb78a43-e50e-45ec-ac26-6c705ad34471
+ref table LocalDateTable_da018aa1-b93c-4c86-addb-92ccc10e7711
+ref table fact_inventory
+ref table LocalDateTable_cbf3cbce-f178-44e8-98fb-1c5a34579a58
+ref table LocalDateTable_d0a57dbd-c5ca-41a3-b940-1d42be091777
+ref table LocalDateTable_13a9c569-3543-4467-9ec6-ebfb1e36d8c7
+ref table LocalDateTable_a59a41cc-5872-48ba-b863-821feaadb70f
+ref table fact_purchases
+ref table LocalDateTable_61bc732b-a182-45d2-83ed-fe6d48cb579e
+ref table LocalDateTable_498e51a5-f6ef-413a-8dce-e295da090c24
+ref table LocalDateTable_c983e230-4d65-4094-8bc8-f05fc6b4757b
+ref table LocalDateTable_e8650d1f-b8cc-47d7-95cf-d14a972afeae
+ref table fact_sales
+ref table LocalDateTable_7a1eebb8-6bc5-40c7-a07d-333bcb39271e
+ref table LocalDateTable_449ad48f-7e30-47d1-8ee5-7a663764f1e6
+ref table LocalDateTable_37a6bd98-1ba0-42d2-b8b0-fbde97f3602a
+
+ref cultureInfo en-US
+

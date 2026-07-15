@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "d4e5f6a7b8c950123456",
+  "position": {
+    "x": 650,
+    "y": 470,
+    "z": 8,
+    "height": 230,
+    "width": 630,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_inventory"
+                    }
+                  },
+                  "Property": "WarehouseID"
+                }
+              },
+              "queryRef": "fact_inventory.WarehouseID",
+              "nativeQueryRef": "WarehouseID",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_inventory"
+                    }
+                  },
+                  "Property": "Inventory Value at Risk"
+                }
+              },
+              "queryRef": "fact_inventory.Inventory Value at Risk",
+              "nativeQueryRef": "Inventory Value at Risk"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
