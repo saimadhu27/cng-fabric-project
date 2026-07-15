@@ -9,6 +9,11 @@ OrderedQty x UnitPrice_USD  = LineTotal_USD, and DiscountPCt is not part of the 
 Purchase orders csv
 OrderedQty x UnitPrice_USD = TotalCost_USD and we are using OrderedQty here instead of ReveivedQty.
 FreightCost_USD is separate and not included in TotalCost_USD
+silver columns:
+- actual_lead_time_days = number of days between order date and actual delivery date/ number of days it took to deliver?
+- expected_lead_time_days = number of days between order date and expected delivery date/ number of days the order is expected to deliver in?
+- is_late_delivery = delivery where actual delivery took more days than expected delivery date. 1 if its late delivery else 0.
+- receipt rate  = How much of what was ordered actually arrived?
 
 what is IncoTerms here?
 Incoterms (International Commercial Terms) are a standardized set of trade rules published by the International Chamber of Commerce that define who's responsible for what during a shipment between a buyer and seller — cost, risk, and logistics at each stage of the journey.
@@ -55,7 +60,7 @@ LastUpdated - Timestamp this inventory record was last refreshed in the source s
 From looking at the data, I thought visualising these are important, since I dont have a specific problem or context
 
 - Companies like these care about gross margin which is the price we sold at - the price we bought at(there is no proper connection/keys between SO's and PO's, so
-its not recommended to do this, but instead what we can do is sum(TotalValue_USD) - sum(LineTotal_USD) per month?)
+its not recommended to do this, )
 - Are we able to meet the SO's delivery date by properly purchasing from buyers? Any lag in this?(same reason as above, no connection b/w the tables, instead try supplier lead time)
 - Supplier Lead time - How long it actually takes a supplier to deliver after you order, and whether they're late. Tells you "can I trust my suppliers to deliver on time?"
 - Customer Delivery Performance - Same idea but on the other side — are you delivering to your customers when you said you would?
